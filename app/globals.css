@@ -31,3 +31,34 @@ body {
     text-wrap: balance;
   }
 }
+
+.mintDetailsContainer {
+  border-radius: 12px;
+  border: 1px solid rgba(242, 242, 245, 0.3);
+  background: #151515;
+  /* padding: 2rem; */
+  display: flex;
+}
+
+.primaryGradient {
+  background: linear-gradient(180deg, #FE508F 100%, #FE96BC 100%);
+}
+
+.primaryGradient1 {
+  background: linear-gradient(180deg, #FEC350 100%, #FE96BC 100%);
+}
+
+.primaryGradient2 {
+  background-image: linear-gradient(to right, #F9E84F, #26A4FF);
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #f9654f -26.91%,
+    #ff26e9 112.45%
+  ); /* Custom gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

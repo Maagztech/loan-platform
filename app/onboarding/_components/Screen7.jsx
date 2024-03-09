@@ -20,7 +20,7 @@ const Screen6 = ({ setVisibleComponent }) => {
         <p className="text-sm">Transaction ID:-</p>
         <div className="flex my-[15px]">
           <p className="text-xs text-gray-500">0xSw49jf949fkof444f4erf4</p>
-          <img src="./copy.svg" />
+          <img src="./Copy.svg" />
         </div>
         <hr className="border-gray-500 mb-[15px]" />
         <p className="text-sm">You successfully minted this Ordinal!</p>

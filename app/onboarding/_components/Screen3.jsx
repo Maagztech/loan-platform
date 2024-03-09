@@ -35,7 +35,7 @@ const Screen3 = ({ setVisibleComponent }) => {
                 <p className="text-xs text-gray-600">
                   {formatString("0x67278681a8e")}
                 </p>
-                <img src="./copy.svg" />
+                <img src="./Copy.svg" />
               </div>
             </div>
           </div>

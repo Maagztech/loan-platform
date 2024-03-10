@@ -1,6 +1,7 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 
-const Screen5 = () => {
+const Screen5 = ({ setVisibleComponent }) => {
   function formatString(str) {
     // Check if the string length is more than 8 to need formatting
     if (str.length > 8) {
@@ -14,9 +15,18 @@ const Screen5 = () => {
       return str;
     }
   }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisibleComponent("F");
+    }, 6000); // Change the component after 5 seconds
+
+    return () => clearTimeout(timer); // Clean up the timer
+  }, []);
+
   return (
     <div className="py-[40px] mx-auto">
-      <div className="primaryGradient2 flex flex-col text-center py-[10px] rounded-[5px]  px-[50px]">
+      <div className="primaryGradient2 flex flex-col items-center py-[10px] rounded-[5px]  px-[50px]">
         <img
           src="./usericon.png"
           alt="user image"
@@ -30,17 +40,21 @@ const Screen5 = () => {
       </div>
       <div className="w-full flex flex-col justify-center items-center my-[10px]">
         <img src="./Arrow 326.svg" className="w-[20px] mb-[5px]" />
-        <div className="bg-blue-500 font-medium text-black text-[14px] px-[4px] rounded-full">Approved $5,500 worth of ETH</div>
+        <div className="bg-blue-500 font-medium text-black text-[14px] px-[4px] rounded-full">
+          Approved $5,500 worth of ETH
+        </div>
         <img src="./Ellipse group.svg" className="my-[4px]" />
         <img src="./Arrow 327.svg" className="w-[20px] mb-[5px]" />
-        <div className="bg-[#E55A74] font-medium text-black text-[14px] px-[4px] rounded-full">Depositing $4,700 worth of BTC</div>
+        <div className="bg-[#E55A74] font-medium text-black text-[14px] px-[4px] rounded-full">
+          Depositing $4,700 worth of BTC
+        </div>
       </div>
-      <div className="primaryGradient2 flex flex-col text-center py-[10px] rounded-[5px]  px-[50px] mt-[40px]">
+      <div className="primaryGradient2 flex flex-col items-center py-[10px] rounded-[5px]  px-[50px] mt-[40px]">
         <img
           src="./usericon.png"
           alt="user image"
           className="h-[90px] w-[90px]"
-        />    
+        />
         <p className="text-gray-500 text-xs bg-black px-2 rounded-full">
           {formatString("0x67278681a8e")}
         </p>
